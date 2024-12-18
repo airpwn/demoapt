@@ -1,0 +1,18 @@
+
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS One
+        run: ls
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.APT }} 
+      - name: LS Two
+        run: ls
+      - name: Install dpkg-dev
+        run: |
+          apt-get update
+          apt-get install dpkg-dev

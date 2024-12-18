@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.APT }} 
+          token: ${{ secrets.APT || github.token }}
       - name: LS Two
         run: ls
       - name: Install dpkg-dev

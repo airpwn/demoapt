@@ -14,5 +14,5 @@ jobs:
         run: ls
       - name: Install dpkg-dev
         run: |
-          apt-get update
-          apt-get install dpkg-dev
+          sudo apt-get update
+          sudo apt-get install dpkg-dev
